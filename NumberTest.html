@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="checkbox" id="numberX" value="200" />volt
+      <input type="checkbox" id="numberY" value="150" />servicel
+
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+    <p id="newText">hello</p>
+    <script>
+      const form = document.querySelector("form");
+      const formSubmit = document.querySelector("#submit");
+      const volt = document.querySelector("#numberX");
+      const service = document.querySelector("#numberY");
+      formSubmit.addEventListener("click", e => {
+        e.preventDefault();
+        if (volt.checked == true || service.checked == true) {
+          let inputNumX = 0;
+          let inputNumY = 0;
+          if (volt.checked == true) {
+            inputNumX = getInputX();
+          }
+          if (service.checked == true) {
+            inputNumY = getInputY();
+          }
+
+          let newNumber = addNum(inputNumX, inputNumY);
+          document.querySelector("#newText").textContent = newNumber + "kr";
+          console.log(newNumber);
+        } else console.log("not checked");
+      });
+
+      function getInputX() {
+        let x = document.querySelector("#numberX").value;
+        return x;
+      }
+
+      function getInputY() {
+        let y = document.querySelector("#numberY").value;
+        return y;
+      }
+
+      function addNum(x, y) {
+        let xN = parseInt(x, 10);
+        let yN = parseInt(y, 10);
+        let newNum = xN + yN;
+        return newNum;
+      }
+    </script>
+  </body>
+</html>
