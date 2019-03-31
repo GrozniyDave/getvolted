@@ -1,3 +1,6 @@
+* {
+  font-family: proxima-nova, sans-serif;
+}
 body {
   margin: 0px;
   padding: 0px;
@@ -17,4 +20,224 @@ body {
   width: 100%;
   height: 100%;
   /* overflow: scroll; */
+}
+
+#follower {
+  width: 60px;
+  height: 60px;
+  background-image: url("assets/Volt-logo-black-orange.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #ef7005;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  pointer-events: none;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  /* font-family: "Playfair Display" !important; */
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.left,
+.right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+
+.left {
+  background: #ffffff;
+}
+
+.right {
+  left: 50%;
+  background: #ef7005;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+
+.logo,
+.next {
+  line-height: 80px;
+  position: absolute;
+  padding: 10px;
+}
+
+.watch,
+.cart {
+  line-height: 80px;
+  position: absolute;
+  padding: 10px;
+  right: 0;
+}
+
+.logo {
+  padding: 10px 80px 10px 60px;
+  background: #ef7005;
+  color: white;
+}
+
+.next {
+  left: 280px;
+}
+
+.watch {
+  right: 220px;
+  /* font-family: helvetica; */
+  color: white;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+.cart {
+  right: 70px;
+}
+
+.right-sidebar {
+  right: 80px;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+  text-align: right;
+}
+
+.right-sidebar ul {
+  list-style: none;
+}
+
+.title {
+  font-size: 36px;
+  /* font-family: "Playfail Display"; */
+  padding-bottom: 40px;
+}
+
+.right-sidebar li:not(:first-child) {
+  padding: 6px 0;
+}
+
+.product {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fly 4s ease-in-out infinite;
+  /* max-width: 525px !important; */
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-50%, -46%);
+  }
+
+  50% {
+    transform: translate(-50%, -54%);
+  }
+
+  100% {
+    transform: translate(-50%, -46%);
+  }
+}
+
+.left-bottom {
+  position: absolute;
+  left: 60px;
+  bottom: 40px;
+  /* font-family: helvetica; */
+  letter-spacing: 3px;
+  color: grey;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.left-sidebar {
+  left: 60px;
+  position: absolute;
+  top: 46%;
+  transform: translateY(-50%);
+  text-align: left;
+  width: 26%;
+}
+
+.left-sidebar button {
+  padding: 24px 48px;
+  /* background: #101010; */
+  color: #fff;
+  outline: none;
+  border: none;
+  margin: 1em 0;
+  /* font-family: helvetica;
+  font-weight: bolder; */
+  letter-spacing: 4px;
+}
+
+.left-sidebar p {
+  font-family: helvetica;
+  font-weight: lighter;
+  line-height: 24px;
+  color: grey;
+}
+
+#price {
+  color: #000;
+}
+
+.media {
+  position: absolute;
+  bottom: 40px;
+  right: 60px;
+}
+
+.media ul {
+  list-style: none;
+}
+
+.media ul li {
+  display: inline-block;
+}
+
+.media ul li:not(:last-child) {
+  padding-right: 40px;
+}
+
+.voltCharger {
+  max-width: 400px !important;
+}
+
+.nostylelink {
+  text-decoration: none;
+  color: white;
+}
+
+.btn {
+  background-color: #ef7005;
+  cursor: pointer;
+}
+.btn:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: white;
+}
+ul,
+li,
+i {
+  color: white;
 }
