@@ -1,4 +1,6 @@
 "use strict";
+
+// following cursor feature
 var $ = document.querySelector.bind(document);
 var $on = document.addEventListener.bind(document);
 
@@ -37,3 +39,5 @@ var followMouse = function followMouse() {
   ball.style.left = x + "px";
   ball.style.top = y + "px";
 };
+
+// following feature ends here
