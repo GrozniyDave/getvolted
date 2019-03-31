@@ -1,3 +1,20 @@
 body {
-  background-color: lightpink;
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-image: url("assets/filtered.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -ms-content-zooming: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* overflow: scroll; */
 }
