@@ -9,18 +9,67 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+
     <title>Document</title>
   </head>
   <body>
     <h1>Sign in</h1>
     <form class="signInForm">
-      <input type="email" name="email" placeholder="  E-mail" />
-      <input type="text" name="password" placeholder="  Password" />
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="  E-mail"
+        onblur=""
+      />
+      <input
+        type="text"
+        name="password"
+        id="password"
+        placeholder="  Password"
+      />
       <p></p>
     </form>
-    <button>Sign in</button>
-    <input type="checkbox" />
-    <p>New to Volt?</p>
-    <button>Create you Volt account</button>
+    <div class="buttonBox">
+      <button class="form1SignIn">Sign in</button>
+      <div class="form1Checkbox">
+        <input type="checkbox" />
+        <p>keep me signed in</p>
+      </div>
+
+      <p class="form1P">New to Volt?</p>
+      <button class="form1Create">Create you Volt account</button>
+    </div>
   </body>
+  <script>
+    const form = document.querySelector(".signInForm");
+
+    form.elements.password.addEventListener("focus", () => {
+      document.querySelector("#password").style.backgroundColor = "white";
+      document.querySelector("#password").style.boxShadow =
+        "0px 3px 9px -4px rgb(0, 0, 0)";
+    });
+
+    form.elements.email.addEventListener("focus", () => {
+      document.querySelector("#email").style.backgroundColor = "white";
+      document.querySelector("#email").style.boxShadow =
+        "0px 3px 9px -4px rgb(0, 0, 0)";
+    });
+
+    form.elements.email.addEventListener("blur", () => {
+      if (form.elements.email.checkValidity()) {
+        document.querySelector("#email").style.backgroundColor = "green";
+      } else {
+        document.querySelector("#email").style.backgroundColor = "red";
+      }
+    });
+
+    form.elements.password.addEventListener("blur", () => {
+      if (form.elements.email.checkValidity()) {
+        document.querySelector("#password").style.backgroundColor = "green";
+      } else {
+        document.querySelector("#password").style.backgroundColor = "red";
+      }
+    });
+  </script>
 </html>
