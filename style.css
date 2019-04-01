@@ -243,3 +243,13 @@ li,
 i {
   color: white;
 }
+@media only screen and (max-width: 935px) {
+  .voltCharger {
+    max-width: 300px !important;
+  }
+}
+@media only screen and (max-width: 788px) {
+  .voltCharger {
+    max-width: 200px !important;
+  }
+}
