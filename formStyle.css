@@ -96,16 +96,38 @@ input[name="password"] {
 
 .buttonBox {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/1fr 100px 150px 100px 1fr;
+  grid-template: 50px 1fr 1fr 1fr/1fr 100px 150px 100px 1fr;
   color: white;
   margin-top: 2.5em;
 }
 
 .buttonBox2 {
   display: grid;
-  grid-template: 1fr 1fr 1fr 1fr/1fr 100px 150px 100px 1fr;
+  grid-template: 50px 1fr 1fr 1fr/1fr 100px 150px 100px 1fr;
   color: white;
   margin-top: 2.5em;
+}
+
+.form2Create {
+  border: none;
+  color: orangered;
+  -webkit-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
+  font-size: 1.2em;
+  background-color: white;
+
+  grid-area: 1/2/1/5;
+}
+.form2P {
+  text-align: center;
+  grid-area: 3/2/3/5;
+}
+
+.link {
+  font-size: 1.2em;
+  color: red;
+  text-decoration: none;
 }
 
 .form1P {
