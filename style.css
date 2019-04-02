@@ -105,7 +105,6 @@ input[name="rePassword"] {
   border-bottom: transparent !important;
 
   text-decoration: none;
-  border-radius: 50px;
   grid-area: 7/2/7/2;
 }
 
@@ -155,7 +154,7 @@ input[name="password"] {
   border-right: transparent !important;
   border-bottom: transparent !important;
   text-decoration: none;
-  border-radius: 20px;
+  border-radius: 50px;
   grid-area: 3/2/3/2;
 }
 
