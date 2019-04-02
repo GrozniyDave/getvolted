@@ -99,7 +99,10 @@
     /* Password on blur*/
     formSignIn.elements.password.addEventListener("blur", () => {
       document.querySelector("#password").style.boxShadow = "";
-      if (formSignIn.elements.password.validity.valid) {
+      if (
+        formSignIn.elements.password.validity.valid &&
+        formSignIn.elements.password.value !== ""
+      ) {
         document.querySelector(".checkMark2").classList.add("block");
       } else {
         document.querySelector("#password").style.backgroundColor = "#F54646";
