@@ -166,7 +166,7 @@ input[name="password"] {
 
 .form2Create {
   border: none;
-  color: orangered;
+  color: #ef7005;
   -webkit-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
@@ -200,7 +200,7 @@ input[name="password"] {
 
 .form1SignIn {
   border: none;
-  color: orangered;
+  color: #ef7005;
   -webkit-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
@@ -220,7 +220,7 @@ input[name="password"] {
 
 .form1Create {
   border: none;
-  color: orangered;
+  color: #ef7005;
   -webkit-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 9px -4px rgba(0, 0, 0, 0.75);

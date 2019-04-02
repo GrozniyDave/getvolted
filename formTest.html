@@ -13,6 +13,7 @@
       <h1>Sign in</h1>
       <form class="signInForm">
         <input
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           type="email"
           name="email"
           id="email"
@@ -22,6 +23,7 @@
         <img class="checkMark2" src="assets/CheckMark.png" />
         <img class="wrongMark2" src="assets/wrong.png" />
         <input
+          pattern="[A-Za-z]{6,}"
           type="password"
           name="password"
           id="password"
@@ -64,7 +66,8 @@
     /* Password on focus */
     formSignIn.elements.password.addEventListener("focus", () => {
       document.querySelector("#password").style.backgroundColor = "white";
-      document.querySelector(".wrongMark").classList.remove("block");
+      document.querySelector(".wrongMark2").classList.remove("block");
+      document.querySelector(".checkMark2").classList.remove("block");
       document.querySelector("#password").style.boxShadow =
         "0px 3px 9px -4px rgb(0, 0, 0)";
     });
@@ -81,10 +84,14 @@
     /* Email on blur */
     formSignIn.elements.email.addEventListener("blur", () => {
       document.querySelector("#email").style.boxShadow = "";
-      if (formSignIn.elements.email.checkValidity()) {
+      if (
+        formSignIn.elements.email.validity.valid &&
+        formSignIn.elements.email.value !== ""
+      ) {
         document.querySelector(".checkMark").classList.add("block");
       } else {
-        document.querySelector("#email").style.backgroundColor = "red";
+        document.querySelector("#email").style.backgroundColor = "#F54646";
+        document.querySelector("#email").style.border = "none";
         document.querySelector(".wrongMark").classList.add("block");
       }
     });
@@ -92,11 +99,12 @@
     /* Password on blur*/
     formSignIn.elements.password.addEventListener("blur", () => {
       document.querySelector("#password").style.boxShadow = "";
-      if (formSignIn.elements.email.checkValidity()) {
+      if (formSignIn.elements.password.validity.valid) {
         document.querySelector(".checkMark2").classList.add("block");
       } else {
-        document.querySelector("#password").style.backgroundColor = "red";
-        document.querySelector(".wrongMark").classList.add("block");
+        document.querySelector("#password").style.backgroundColor = "#F54646";
+        document.querySelector("#password").style.border = "none";
+        document.querySelector(".wrongMark2").classList.add("block");
       }
     });
   </script>
