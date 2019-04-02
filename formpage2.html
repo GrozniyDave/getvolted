@@ -13,59 +13,55 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Sign in</h1>
-    <form class="signInForm">
+    <h1>Create account</h1>
+    <form class="createForm">
+      <input type="text" name="fullName" id="fullName" placeholder="  Name" />
+      <input type="email" name="email2" id="email2" placeholder="  E-mail" />
       <input
-        type="email"
-        name="email"
-        id="email"
-        placeholder="  E-mail"
-        onblur=""
+        type="password"
+        name="password2"
+        id="password2"
+        placeholder="  Password"
       />
       <input
-        type="text"
-        name="password"
-        id="password"
-        placeholder="  Password"
+        type="password"
+        name="rePassword"
+        id="rePassword"
+        placeholder="  Re-enter password"
       />
       <p></p>
     </form>
     <div class="buttonBox">
-      <button class="form1SignIn">Sign in</button>
-      <label class="form1Checkbox">
-        <input type="checkbox" />
-        keep me signed in
-      </label>
+      <button class="form2Create">Create account</button>
 
-      <p class="form1P">New to Volt?</p>
-      <button class="form1Create">Create you Volt account</button>
+      <p class="form2P">already have an account?<a>Sign In</a></p>
     </div>
   </body>
   <script>
-    const formSignIn = document.querySelector(".signInForm");
+    const form = document.querySelector(".signInForm");
 
-    formSignIn.elements.password.addEventListener("focus", () => {
+    form.elements.password.addEventListener("focus", () => {
       document.querySelector("#password").style.backgroundColor = "white";
       document.querySelector("#password").style.boxShadow =
         "0px 3px 9px -4px rgb(0, 0, 0)";
     });
 
-    formSignIn.elements.email.addEventListener("focus", () => {
+    form.elements.email.addEventListener("focus", () => {
       document.querySelector("#email").style.backgroundColor = "white";
       document.querySelector("#email").style.boxShadow =
         "0px 3px 9px -4px rgb(0, 0, 0)";
     });
 
-    formSignIn.elements.email.addEventListener("blur", () => {
-      if (formSignIn.elements.email.checkValidity()) {
+    form.elements.email.addEventListener("blur", () => {
+      if (form.elements.email.checkValidity()) {
         document.querySelector("#email").style.backgroundColor = "green";
       } else {
         document.querySelector("#email").style.backgroundColor = "red";
       }
     });
 
-    formSignIn.elements.password.addEventListener("blur", () => {
-      if (formSignIn.elements.email.checkValidity()) {
+    form.elements.password.addEventListener("blur", () => {
+      if (form.elements.email.checkValidity()) {
         document.querySelector("#password").style.backgroundColor = "green";
       } else {
         document.querySelector("#password").style.backgroundColor = "red";
