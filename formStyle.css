@@ -1,11 +1,30 @@
-body {
+* {
   font-family: proxima-nova, sans-serif;
-  background: orange;
 }
 
 h1 {
   text-align: center;
   color: white;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.wrapper {
+  background-image: url("assets/filtered.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  -ms-content-zooming: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* overflow: scroll; */
 }
 
 .signInForm {
@@ -20,7 +39,7 @@ h1 {
 
 input[name="fullName"] {
   padding-left: 1em;
-
+  background-color: white;
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -33,7 +52,7 @@ input[name="fullName"] {
 
 input[name="rePassword"] {
   padding-left: 1em;
-
+  background-color: white;
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -46,7 +65,7 @@ input[name="rePassword"] {
 
 input[name="email2"] {
   padding-left: 1em;
-
+  background-color: white;
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -59,7 +78,7 @@ input[name="email2"] {
 
 input[name="password2"] {
   padding-left: 1em;
-
+  background-color: white;
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -72,7 +91,7 @@ input[name="password2"] {
 
 input[name="email"] {
   padding-left: 1em;
-
+  background-color: white;
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -85,6 +104,7 @@ input[name="email"] {
 
 input[name="password"] {
   padding-left: 1em;
+  background-color: white;
   border-top: transparent !important;
   border-left: transparent !important;
   border-right: transparent !important;
@@ -103,7 +123,7 @@ input[name="password"] {
 
 .buttonBox2 {
   display: grid;
-  grid-template: 50px 1fr 1fr 1fr/1fr 100px 150px 100px 1fr;
+  grid-template: 50px 0px 1fr 1fr/1fr 100px 150px 100px 1fr;
   color: white;
   margin-top: 2.5em;
 }
@@ -124,9 +144,16 @@ input[name="password"] {
   grid-area: 3/2/3/5;
 }
 
+.line {
+  color: white;
+  text-decoration: none;
+  border-top: none;
+  grid-area: 2/3/2/3;
+}
+
 .link {
-  font-size: 1.2em;
-  color: red;
+  font-size: 1.4em;
+  color: white;
   text-decoration: none;
 }
 
@@ -164,4 +191,137 @@ input[name="password"] {
   font-size: 1.2em;
   background-color: white;
   grid-area: 4/2/4/5;
+}
+
+/* Label */
+label {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type="checkbox"].css-checkbox {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+input[type="checkbox"].css-checkbox + label.css-label {
+  padding-left: 20px;
+  height: 15px;
+  display: inline-block;
+  line-height: 15px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox:checked + label.css-label {
+  background-position: 0 -15px;
+}
+.css-label {
+  background-image: url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+}
+.lite-red-check {
+  background-image: url(http://csscheckbox.com/checkboxes/lite-red-check.png);
+}
+
+input[type="checkbox"].css-checkbox.med + label.css-label.med {
+  padding-left: 22px;
+  height: 17px;
+  display: inline-block;
+  line-height: 17px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox.med:checked + label.css-label.med {
+  background-position: 0 -17px;
+}
+input[type="checkbox"].css-checkbox.sme + label.css-label.sme {
+  padding-left: 22px;
+  height: 16px;
+  display: inline-block;
+  line-height: 16px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox.sme:checked + label.css-label.sme {
+  background-position: 0 -16px;
+}
+input[type="checkbox"].css-checkbox.lrg + label.css-label.lrg {
+  padding-left: 22px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox.lrg:checked + label.css-label.lrg {
+  background-position: 0 -20px;
+}
+input[type="checkbox"].css-checkbox.med + label.css-label.med {
+  padding-left: 22px;
+  height: 17px;
+  display: inline-block;
+  line-height: 17px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox.med:checked + label.css-label.med {
+  background-position: 0 -17px;
+}
+input[type="checkbox"].css-checkbox.sme + label.css-label.sme {
+  padding-left: 22px;
+  height: 16px;
+  display: inline-block;
+  line-height: 16px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox.sme:checked + label.css-label.sme {
+  background-position: 0 -16px;
+}
+input[type="checkbox"].css-checkbox.lrg + label.css-label.lrg {
+  padding-left: 22px;
+  height: 20px;
+  display: inline-block;
+  line-height: 20px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  font-size: 15px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+input[type="checkbox"].css-checkbox.lrg:checked + label.css-label.lrg {
+  background-position: 0 -20px;
 }

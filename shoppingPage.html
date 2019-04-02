@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="formStyle.css" />
+
+    <title>Sign In - Getvolt</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Sign in</h1>
+      <form class="signInForm">
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="  E-mail"
+          onblur=""
+        />
+        <input
+          type="text"
+          name="password"
+          id="password"
+          placeholder="  Password"
+        />
+        <p></p>
+      </form>
+      <div class="buttonBox">
+        <button class="form1SignIn">Sign in</button>
+        <label class="form1Checkbox">
+          <input
+            type="checkbox"
+            id="checkbox3"
+            class="css-checkbox"
+            checked="checked"
+          />
+          <label
+            for="checkbox3"
+            name="checkbox2_lbl"
+            class="css-label lite-red-check"
+            >keep me signed in</label
+          >
+        </label>
+
+        <p class="form1P">New to Volt?</p>
+        <button class="form1Create" href="formpage2.html">
+          Create you Volt account
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    const formSignIn = document.querySelector(".signInForm");
+
+    document.querySelector(".form1Create").addEventListener("click", () => {
+      window.location.href = "formpage2.html";
+    });
+
+    formSignIn.elements.password.addEventListener("focus", () => {
+      document.querySelector("#password").style.backgroundColor = "white";
+      document.querySelector("#password").style.boxShadow =
+        "0px 3px 9px -4px rgb(0, 0, 0)";
+    });
+
+    formSignIn.elements.email.addEventListener("focus", () => {
+      document.querySelector("#email").style.backgroundColor = "white";
+      document.querySelector("#email").style.boxShadow =
+        "0px 3px 9px -4px rgb(0, 0, 0)";
+    });
+
+    formSignIn.elements.email.addEventListener("blur", () => {
+      if (formSignIn.elements.email.checkValidity()) {
+        document.querySelector("#email").style.backgroundColor = "green";
+      } else {
+        document.querySelector("#email").style.backgroundColor = "red";
+      }
+    });
+
+    formSignIn.elements.password.addEventListener("blur", () => {
+      if (formSignIn.elements.email.checkValidity()) {
+        document.querySelector("#password").style.backgroundColor = "green";
+      } else {
+        document.querySelector("#password").style.backgroundColor = "red";
+      }
+    });
+  </script>
+</html>
