@@ -29,7 +29,7 @@ body {
 
 .signInForm {
   display: grid;
-  grid-template: 1fr 20px 1fr/1fr 300px 1fr;
+  grid-template: 1fr 20px 1fr/1fr 280px 30px 1fr;
 }
 
 .createForm {
@@ -99,7 +99,7 @@ input[name="email"] {
 
   text-decoration: none;
   border-radius: 50px;
-  grid-area: 1/2/1/2;
+  grid-area: 1/2/1/4;
 }
 
 input[name="password"] {
@@ -111,7 +111,43 @@ input[name="password"] {
   border-bottom: transparent !important;
   text-decoration: none;
   border-radius: 20px;
-  grid-area: 3/2/3/2;
+  grid-area: 3/2/3/4;
+}
+
+.checkMark {
+  display: none;
+  padding-top: 4px;
+  max-width: 25px;
+  grid-area: 1/3/1/3;
+  z-index: 9999;
+}
+
+.wrongMark {
+  display: none;
+  padding-top: 4px;
+  max-width: 25px;
+  grid-area: 1/3/1/3;
+  z-index: 9999;
+}
+
+.checkMark2 {
+  display: none;
+  padding-top: 4px;
+  max-width: 25px;
+  grid-area: 3/3/3/3;
+  z-index: 9999;
+}
+
+.wrongMark2 {
+  display: none;
+  padding-top: 4px;
+  max-width: 25px;
+  grid-area: 3/3/3/3;
+  z-index: 9999;
+}
+
+.block {
+  display: block;
 }
 
 .buttonBox {

@@ -19,12 +19,16 @@
           placeholder="  E-mail"
           onblur=""
         />
+        <img class="checkMark2" src="assets/CheckMark.png" />
+        <img class="wrongMark2" src="assets/wrong.png" />
         <input
-          type="text"
+          type="password"
           name="password"
           id="password"
           placeholder="  Password"
         />
+        <img class="checkMark" src="assets/CheckMark.png" />
+        <img class="wrongMark" src="assets/wrong.png" />
         <p></p>
       </form>
       <div class="buttonBox">
@@ -57,32 +61,42 @@
     document.querySelector(".form1Create").addEventListener("click", () => {
       window.location.href = "formpage2.html";
     });
-
+    /* Password on focus */
     formSignIn.elements.password.addEventListener("focus", () => {
       document.querySelector("#password").style.backgroundColor = "white";
+      document.querySelector(".wrongMark").classList.remove("block");
       document.querySelector("#password").style.boxShadow =
         "0px 3px 9px -4px rgb(0, 0, 0)";
     });
 
+    /* Email on focus */
+
     formSignIn.elements.email.addEventListener("focus", () => {
       document.querySelector("#email").style.backgroundColor = "white";
+      document.querySelector(".wrongMark").classList.remove("block");
+      document.querySelector(".checkMark").classList.remove("block");
       document.querySelector("#email").style.boxShadow =
         "0px 3px 9px -4px rgb(0, 0, 0)";
     });
-
+    /* Email on blur */
     formSignIn.elements.email.addEventListener("blur", () => {
+      document.querySelector("#email").style.boxShadow = "";
       if (formSignIn.elements.email.checkValidity()) {
-        document.querySelector("#email").style.backgroundColor = "green";
+        document.querySelector(".checkMark").classList.add("block");
       } else {
         document.querySelector("#email").style.backgroundColor = "red";
+        document.querySelector(".wrongMark").classList.add("block");
       }
     });
 
+    /* Password on blur*/
     formSignIn.elements.password.addEventListener("blur", () => {
+      document.querySelector("#password").style.boxShadow = "";
       if (formSignIn.elements.email.checkValidity()) {
-        document.querySelector("#password").style.backgroundColor = "green";
+        document.querySelector(".checkMark2").classList.add("block");
       } else {
         document.querySelector("#password").style.backgroundColor = "red";
+        document.querySelector(".wrongMark").classList.add("block");
       }
     });
   </script>
