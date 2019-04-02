@@ -118,3 +118,30 @@ function fixStepIndicator(n) {
   //... and adds the "active" class to the current step:
   x[n].className += " active";
 }
+
+//tobias form js//
+const formSignIn = document.querySelector(".signInForm");
+document.querySelector("#password").addEventListener("focus", () => {
+  document.querySelector("#password").style.backgroundColor = "white";
+  document.querySelector("#password").style.boxShadow =
+    "0px 3px 9px -4px rgb(0, 0, 0)";
+});
+document.querySelector("#email").addEventListener("focus", () => {
+  document.querySelector("#email").style.backgroundColor = "white";
+  document.querySelector("#email").style.boxShadow =
+    "0px 3px 9px -4px rgb(0, 0, 0)";
+});
+document.querySelector("#email").addEventListener("blur", () => {
+  if (document.querySelector("#email").checkValidity()) {
+    document.querySelector("#email").style.backgroundColor = "green";
+  } else {
+    document.querySelector("#email").style.backgroundColor = "red";
+  }
+});
+document.querySelector("#password").addEventListener("blur", () => {
+  if (document.querySelector("#email").checkValidity()) {
+    document.querySelector("#password").style.backgroundColor = "green";
+  } else {
+    document.querySelector("#password").style.backgroundColor = "red";
+  }
+});
