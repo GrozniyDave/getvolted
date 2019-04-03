@@ -63,8 +63,13 @@
     document.querySelector(".form1Create").addEventListener("click", () => {
       window.location.href = "formpage2.html";
     });
+
+    document.querySelector(".form1SignIn").addEventListener("click", () => {
+      window.location.href = "shoppingPage.html";
+    });
     /* Password on focus */
     formSignIn.elements.password.addEventListener("focus", () => {
+      document.querySelector("#password").style.color = "black";
       document.querySelector("#password").style.backgroundColor = "white";
       document.querySelector(".wrongMark2").classList.remove("block");
       document.querySelector(".checkMark2").classList.remove("block");
@@ -75,6 +80,7 @@
     /* Email on focus */
 
     formSignIn.elements.email.addEventListener("focus", () => {
+      document.querySelector("#email").style.color = "black";
       document.querySelector("#email").style.backgroundColor = "white";
       document.querySelector(".wrongMark").classList.remove("block");
       document.querySelector(".checkMark").classList.remove("block");
@@ -84,15 +90,20 @@
     /* Email on blur */
     formSignIn.elements.email.addEventListener("blur", () => {
       document.querySelector("#email").style.boxShadow = "";
+
       if (
         formSignIn.elements.email.validity.valid &&
         formSignIn.elements.email.value !== ""
       ) {
+        //right
         document.querySelector(".checkMark").classList.add("block");
-      } else {
+      } else if (!formSignIn.elements.email.validity.valid) {
+        //wrong
+        document.querySelector("#email").style.color = "white";
         document.querySelector("#email").style.backgroundColor = "#F54646";
         document.querySelector("#email").style.border = "none";
         document.querySelector(".wrongMark").classList.add("block");
+      } else {
       }
     });
 
@@ -104,10 +115,12 @@
         formSignIn.elements.password.value !== ""
       ) {
         document.querySelector(".checkMark2").classList.add("block");
-      } else {
+      } else if (!formSignIn.elements.password.validity.valid) {
+        document.querySelector("#email").style.color = "white";
         document.querySelector("#password").style.backgroundColor = "#F54646";
         document.querySelector("#password").style.border = "none";
         document.querySelector(".wrongMark2").classList.add("block");
+      } else {
       }
     });
   </script>
